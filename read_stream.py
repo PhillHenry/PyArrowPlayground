@@ -12,6 +12,8 @@ def read_from_shm():
         schema = reader.schema
         record_batch = reader.read_next_batch()
         print(record_batch)
+        df = record_batch.to_pandas()
+        print(df)
 
 
 if __name__ == "__main__":
