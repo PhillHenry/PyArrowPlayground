@@ -12,6 +12,7 @@ def read_from_shm():
         schema = reader.schema
         record_batch = reader.read_next_batch()
         print(record_batch)
+        print(record_batch.column(0).tolist())
         df = record_batch.to_pandas()
         print(df)
 
