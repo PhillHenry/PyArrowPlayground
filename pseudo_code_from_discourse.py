@@ -1,6 +1,7 @@
 import pyarrow as pa
 import polars as pl
 import S3FileSystem from  s3fs
+import pyarrow.compute as pc
 
 fs = S3FileSystem()
 
